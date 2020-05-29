@@ -26,6 +26,9 @@ public class UserDAO implements UserDaoInterface {
 			result = preparedStatement.executeUpdate();
 		} catch (SQLException e) {
 			System.out.println(e);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return result;
 	}
@@ -48,6 +51,9 @@ public class UserDAO implements UserDaoInterface {
 		} catch (SQLException e) {
 			// process sql exception
 			System.out.println(e);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return status;
 	}
